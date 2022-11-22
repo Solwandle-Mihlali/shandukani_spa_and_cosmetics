@@ -2,3 +2,78 @@
     padding:0;
     margin:0;
 }
+
+body{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+nav{
+    backdrop-filter: blur(4px);
+    width: 100%;
+    height: 15vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    box-shadow: 1px 1px 10px black;
+    display: grid;
+    grid-template-columns:repeat(100,auto);
+    grid-template-rows: repeat(50,auto);
+}
+nav ul{
+    background: rgba(255, 0, 0, 0);
+    grid-row:10/40;
+    grid-column: 50/99;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+}
+nav ul li a{
+
+   color: white;
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: bolder;
+   font-size: 14px;
+   text-decoration: none;
+}
+
+nav header{
+    grid-row: 10/40;
+    grid-column: 5/20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+nav header h1{
+
+    color: white;
+    font-size: 36px;
+}
+nav header::after{
+    content: "cosmetics & spa";
+    color: white;
+    font-family: sans-serif;
+    text-transform: lowercase;
+    font-size: 12px;
+    
+}
+section{
+    width: 100%;
+    height: 99vh;
+    display: grid;
+    grid-template-columns: repeat(200,auto);
+    grid-template-rows: repeat(150,auto);
+    position: relative;
+}
+
+section[id = "one"]{
+    background-image: url('bg1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+
+}
